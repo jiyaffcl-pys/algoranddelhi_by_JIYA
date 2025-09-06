@@ -1,0 +1,449 @@
+{
+  "version": 3,
+  "sources": [
+    "C:/Users/Dell/algoranddelhi/projects/algoranddelhi/smart_contracts/hello_world/contract.algo.ts"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;AAG0C;AAAqB;AAA7D;AADF;;AAAA;;;AAAA;;;;;;AAAA;;;AAAA;;;;AAAA;;AAGE;;AAAA;AAAA;AAAA;;AAAA;AAHF;;;AAAA;AAGE;;;AAAA;AAAA;AAAA;AAAA;;;AAAA;AAAA;AAAA;;;;;;AAAA;AAAA;AAAA;AAAA;;AAHF;;AAAA;;;AAAA;;AAAA;AAAA;AAAA;;AAGE;;;AAFwC;AAAA;AAAA;AAAA;AAGlC;;AAAA;AAAJ;;;AAHsC;AAIpC;;AAAA;AACO;;;;;;;;;;;;;;;;;AAAP;AAEK;;;;;;;;;;;;;AAAP",
+  "op_pc_offset": 0,
+  "pc_events": {
+    "1": {
+      "subroutine": "@algorandfoundation/algorand-typescript/arc4/index.d.ts::Contract.approvalProgram",
+      "params": {},
+      "block": "main",
+      "stack_in": [],
+      "op": "intcblock 0 1"
+    },
+    "5": {
+      "op": "bytecblock \"bid\""
+    },
+    "11": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "reinterpret_bool%0#0"
+      ],
+      "stack_out": [
+        "reinterpret_bool%0#0"
+      ]
+    },
+    "13": {
+      "op": "bnz main_after_if_else@2",
+      "stack_out": []
+    },
+    "16": {
+      "op": "bytec_0 // \"bid\"",
+      "defined_out": [
+        "\"bid\""
+      ],
+      "stack_out": [
+        "\"bid\""
+      ]
+    },
+    "17": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "\"bid\"",
+        "0"
+      ],
+      "stack_out": [
+        "\"bid\"",
+        "0"
+      ]
+    },
+    "18": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "19": {
+      "block": "main_after_if_else@2",
+      "stack_in": [],
+      "op": "txn NumAppArgs",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "21": {
+      "op": "bz main_bare_routing@8",
+      "stack_out": []
+    },
+    "24": {
+      "op": "pushbytes 0x7975aa2e // method \"placeBid(uint64)string\"",
+      "defined_out": [
+        "Method(placeBid(uint64)string)"
+      ],
+      "stack_out": [
+        "Method(placeBid(uint64)string)"
+      ]
+    },
+    "30": {
+      "op": "txna ApplicationArgs 0",
+      "defined_out": [
+        "Method(placeBid(uint64)string)",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "Method(placeBid(uint64)string)",
+        "tmp%2#0"
+      ]
+    },
+    "33": {
+      "op": "match main_placeBid_route@5",
+      "stack_out": []
+    },
+    "37": {
+      "block": "main_after_if_else@12",
+      "stack_in": [],
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "38": {
+      "op": "return",
+      "stack_out": []
+    },
+    "39": {
+      "block": "main_placeBid_route@5",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tmp%3#0"
+      ]
+    },
+    "41": {
+      "op": "!",
+      "defined_out": [
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%4#0"
+      ]
+    },
+    "42": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "43": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "tmp%5#0"
+      ]
+    },
+    "45": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "46": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "reinterpret_bytes[8]%0#0"
+      ],
+      "stack_out": [
+        "reinterpret_bytes[8]%0#0"
+      ]
+    },
+    "49": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "tmp%7#0"
+      ]
+    },
+    "50": {
+      "callsub": "smart_contracts/hello_world/contract.algo.ts::Auction.placeBid",
+      "op": "callsub placeBid",
+      "defined_out": [
+        "to_encode%0#0"
+      ],
+      "stack_out": [
+        "to_encode%0#0"
+      ]
+    },
+    "53": {
+      "op": "dup",
+      "defined_out": [
+        "to_encode%0#0",
+        "to_encode%0#0 (copy)"
+      ],
+      "stack_out": [
+        "to_encode%0#0",
+        "to_encode%0#0 (copy)"
+      ]
+    },
+    "54": {
+      "op": "len",
+      "defined_out": [
+        "length%0#0",
+        "to_encode%0#0"
+      ],
+      "stack_out": [
+        "to_encode%0#0",
+        "length%0#0"
+      ]
+    },
+    "55": {
+      "op": "itob",
+      "defined_out": [
+        "as_bytes%0#0",
+        "to_encode%0#0"
+      ],
+      "stack_out": [
+        "to_encode%0#0",
+        "as_bytes%0#0"
+      ]
+    },
+    "56": {
+      "op": "extract 6 2",
+      "defined_out": [
+        "length_uint16%0#0",
+        "to_encode%0#0"
+      ],
+      "stack_out": [
+        "to_encode%0#0",
+        "length_uint16%0#0"
+      ]
+    },
+    "59": {
+      "op": "swap",
+      "stack_out": [
+        "length_uint16%0#0",
+        "to_encode%0#0"
+      ]
+    },
+    "60": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_value%0#0"
+      ],
+      "stack_out": [
+        "encoded_value%0#0"
+      ]
+    },
+    "61": {
+      "op": "pushbytes 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "encoded_value%0#0"
+      ],
+      "stack_out": [
+        "encoded_value%0#0",
+        "0x151f7c75"
+      ]
+    },
+    "67": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "encoded_value%0#0"
+      ]
+    },
+    "68": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "tmp%8#0"
+      ]
+    },
+    "69": {
+      "op": "log",
+      "stack_out": []
+    },
+    "70": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "71": {
+      "op": "return",
+      "stack_out": []
+    },
+    "72": {
+      "block": "main_bare_routing@8",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%9#0"
+      ],
+      "stack_out": [
+        "tmp%9#0"
+      ]
+    },
+    "74": {
+      "op": "bnz main_after_if_else@12",
+      "stack_out": []
+    },
+    "77": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%10#0"
+      ],
+      "stack_out": [
+        "tmp%10#0"
+      ]
+    },
+    "79": {
+      "op": "!",
+      "defined_out": [
+        "tmp%11#0"
+      ],
+      "stack_out": [
+        "tmp%11#0"
+      ]
+    },
+    "80": {
+      "error": "can only call when creating",
+      "op": "assert // can only call when creating",
+      "stack_out": []
+    },
+    "81": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "82": {
+      "op": "return",
+      "stack_out": []
+    },
+    "83": {
+      "subroutine": "smart_contracts/hello_world/contract.algo.ts::Auction.placeBid",
+      "params": {
+        "amount#0": "uint64"
+      },
+      "block": "placeBid",
+      "stack_in": [],
+      "op": "proto 1 1"
+    },
+    "86": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "87": {
+      "op": "bytec_0 // \"bid\"",
+      "defined_out": [
+        "\"bid\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"bid\""
+      ]
+    },
+    "88": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "89": {
+      "error": "check GlobalState exists",
+      "op": "assert // check GlobalState exists",
+      "stack_out": [
+        "maybe_value%0#0"
+      ]
+    },
+    "90": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "amount#0 (copy)",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "amount#0 (copy)"
+      ]
+    },
+    "92": {
+      "op": "<",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "93": {
+      "op": "bz placeBid_after_if_else@2",
+      "stack_out": []
+    },
+    "96": {
+      "op": "bytec_0 // \"bid\"",
+      "stack_out": [
+        "\"bid\""
+      ]
+    },
+    "97": {
+      "op": "frame_dig -1",
+      "stack_out": [
+        "\"bid\"",
+        "amount#0 (copy)"
+      ]
+    },
+    "99": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "100": {
+      "op": "pushbytes \"new highest bid\"",
+      "defined_out": [
+        "\"new highest bid\""
+      ],
+      "stack_out": [
+        "\"new highest bid\""
+      ]
+    },
+    "117": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "118": {
+      "block": "placeBid_after_if_else@2",
+      "stack_in": [],
+      "op": "pushbytes \"bid too low\"",
+      "defined_out": [
+        "\"bid too low\""
+      ],
+      "stack_out": [
+        "\"bid too low\""
+      ]
+    },
+    "131": {
+      "retsub": true,
+      "op": "retsub"
+    }
+  }
+}
